@@ -1,0 +1,14 @@
+{{ define "main" }}
+<h1>{{.Title}}</h1>
+<p>{{.Content}}</h1>
+
+<div style="display: grid">
+{{ range .Pages }}
+<div style="width: 189px;height: 150px;border: 1px solid black">
+    <a href="{{.Permalink}}">
+        <img src="/logo/{{.Params.logo}}.png" title="{{.Title}}" alt="{{.Title}}">
+    </a>
+</div>
+{{ end }}
+</div>
+{{ end }}
